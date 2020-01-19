@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Async or Defer</title>
+  </head>
+  <body>
+    <div style="text-align: center;">
+      <h1>
+        JavaScript: Async / Defer
+      </h1>
+      <h5>
+        <i>-- goodwillsandy</i>
+      </h5>
+    </div>
+    <div style="color: green;">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi facilis
+      adipisci veritatis in, aspernatur modi placeat! Nihil provident, quos
+      soluta ab porro labore sunt accusamus eius et adipisci praesentium
+      mollitia.
+    </div>
+    <hr />
+
+    <!--
+        **** browser will parse to till this script tag
+        **** then download and execute this script file.
+    -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.0/d3.min.js"></script>
+
+    <script src="./index.js"></script>
+
+    <!--
+        if we put both async and defer than async will be applied.
+     -->
+
+    <!--
+        ASYNC
+
+        **** DCL happens asap after HTML parses
+        **** Parsing don't wait for script download and evaluation
+        **** Scripts are independent (execute as recieved)
+        **** onLoad can be used for trigger but it waits for fonts, images everyting.
+
+     -->
+
+    <!--
+        DEFER
+
+        **** DCL is intentionaly pushed back
+        **** parse HTML don't wait for script download and eval
+        **** Scripts keep their relative order of execution
+
+      -->
+
+    <div id="js-text" style="color: dodgerblue;"></div>
+    <hr />
+    <div style="color: red;">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla magnam et
+      corporis quia enim inventore totam similique adipisci nihil reprehenderit
+      dicta possimus doloremque a sint repellendus, perferendis reiciendis
+      dignissimos veniam?
+    </div>
+  </body>
+</html>
